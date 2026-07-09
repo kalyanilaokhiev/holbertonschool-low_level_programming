@@ -3,7 +3,7 @@
 /**
  * main - starting point
  *
- * Description: prints all single digit 0-10
+ * Description: prints 1-9 with space
  * Return: zero
  */
 
@@ -17,6 +17,7 @@ int main(void)
 
 		if (number < 9)
 		{
+			putchar(',');
 			putchar(' ');
 		}
 	}
