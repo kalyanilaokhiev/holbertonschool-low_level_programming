@@ -3,6 +3,7 @@
 /**
  * main - starting point
  *
+ * Description: lowercase
  * Return: zero
  */
 
