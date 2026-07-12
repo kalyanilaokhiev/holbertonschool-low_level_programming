@@ -5,7 +5,7 @@
  * @n: starting number
  *
  * Description: counts up or down to 98
- * Return: the numbers to get to 98
+ * Return: void
  */
 
 void print_to_98(int n)
@@ -39,3 +39,4 @@ void print_to_98(int n)
 		else
 			n--;
 	}
+}
