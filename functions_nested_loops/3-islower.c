@@ -2,6 +2,7 @@
 
 /**
  * _islower - starting point
+ * @c: the character
  *
  * Description: checks for lowercase
  * Return: 1 is c lowercase, 0 otherwise
