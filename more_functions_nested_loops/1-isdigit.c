@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * _isdigit - starting point
  * @c: input character
  *
