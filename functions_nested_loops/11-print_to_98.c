@@ -20,10 +20,10 @@ void print_to_98(int n)
 			number = -number;
 		}
 
-		if (num >= 100)
+		if (number >= 100)
 		{
 			_putchar((number / 100) + '0');
-			_putcahr(((number / 10) % 10) + '0');
+			_putchar(((number / 10) % 10) + '0');
 		}
 		else if (number >= 10)
 		{
