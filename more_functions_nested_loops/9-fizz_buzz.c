@@ -8,7 +8,7 @@
  * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -29,6 +29,11 @@ void main(void)
 		else
 		{
 			printf("%d", n);
+		}
+
+		if (n < 100)
+		{
+			printf(" ")
 		}
 	}
 	printf("\n");
