@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * fizz_buzz - starting point
+ * main - starting point
  *
  * Description: prints 1 - 100 with buzz words
  * Return: 0
  */
 
-void fizz_buzz(void)
+void main(void)
 {
 	int n;
 
