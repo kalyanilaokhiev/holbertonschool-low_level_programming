@@ -14,7 +14,7 @@ void fizz_buzz(void)
 
 	for (n = 0; n <= 100; n++)
 	{
-		if (n % 3 == 0 && n  % 5 == 0)
+		if (n % 3 == 0 && n % 5 == 0)
 		{
 			printf("FizzBuzz");
 		}
@@ -28,7 +28,7 @@ void fizz_buzz(void)
 		}
 		else
 		{
-			print("%d", n);
+			printf("%d", n);
 		}
 	}
 	printf("\n");
