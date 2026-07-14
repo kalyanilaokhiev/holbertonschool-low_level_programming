@@ -62,6 +62,22 @@ int main(void)
 
 			printf("Result: %d\n", result);
 		}
+		else if (n == 3)
+		{
+			int A;
+			int B;
+			int result;
+
+			printf("A: ");
+			scanf("%d", &A);
+
+			printf("B: ");
+			scanf("%d", &B);
+
+			result = (A * B);
+
+			printf("Result: %d\n", result);
+		}
 		else if (n == 0)
 		{
 			printf("Bye!\n");
