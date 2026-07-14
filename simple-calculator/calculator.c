@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int n;
+	/* need to make it an invalid choice so it doesnt automatically quit*/
+	int n = -1;
 
 	printf("Simple Calculator\n");
 	printf("1) Add\n");
@@ -18,14 +19,20 @@ int main(void)
 	printf("3) Multiply\n");
 	printf("4) Divide\n");
 	printf("0) Quit\n");
-
-	printf("Choice: ");
-	scanf("%d", &n);
-
-	if (n == 0)
+	
+	while (n != 0)
 	{
-		printf("Bye!\n");
-	}
+		printf("Choice: ");
+		scanf("%d", &n);
 
+		if (n != 0 && n != 1 && n != 2 && n != 3 && n != 4)
+		{
+			printf("Invalid choice\n");
+		}
+		if (n == 0)
+		{
+			printf("Bye!\n");
+		}
+	}
 	return (0);
 }
