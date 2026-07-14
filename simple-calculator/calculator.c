@@ -78,6 +78,28 @@ int main(void)
 
 			printf("Result: %d\n", result);
 		}
+		else if (n == 4)
+		{
+			int A;
+			int B;
+			int result;
+
+			printf("A: ");
+			scanf("%d", &A);
+
+			printf("B: ");
+			scanf("%d", &B);
+
+			if (B == 0)
+			{
+				printf("Error: division by zero\n");
+			}
+			else
+			{
+				result = (A / B);
+				printf("Result: %d\n", result);
+			}
+		}
 		else if (n == 0)
 		{
 			printf("Bye!\n");
