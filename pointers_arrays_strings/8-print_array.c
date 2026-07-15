@@ -20,7 +20,7 @@ void print_array(int *a, int n)
 		/* adding commas to all but the last */
 		if (i < n - 1)
 		{
-			printf(",");
+			printf(", ");
 		}
 	}
 	printf("\n");
