@@ -23,9 +23,9 @@ char *cap_string(char *str)
 			}
 			else
 			{
-				for (j = 0; seperators[j] != '\0'; j++)
+				for (j = 0; separators[j] != '\0'; j++)
 				{
-					if (str[i - 1] == seperators[j])
+					if (str[i - 1] == separators[j])
 					{
 						str[i] = str[i] - 32;
 						break;
