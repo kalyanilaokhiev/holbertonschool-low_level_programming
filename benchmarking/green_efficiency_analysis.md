@@ -17,7 +17,7 @@ BUILD DATA seconds: 0.000315
 PROCESS seconds: 0.000317
 REDUCE seconds: 0.000621
 
-Looking at these results, it is evident that most of the program's time was spent on the reduce step, taking 0.000621 seconds compared to the build, taking 0.00315 seconds, and the process, with 0.000317 seconds.
+Looking at these results, it is evident that most of the program's time was spent on the reduce step, taking 0.000621 seconds compared to the build, taking 0.000315 seconds, and the process, with 0.000317 seconds.
 
 ## Relation Between Runtime and Energy Consumption
 When a computer takes longer to run, it uses more battery and power. When there is nothing to do, the processor can rest, designed to save energy. However, if a program is slower or not optimised, this will make the processor continue running at full power for a longer runtime.
