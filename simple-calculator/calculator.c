@@ -1,17 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - starting point
- * add: adding funtion
- * subtract: subtract function
- * multiply - multiply function
- * divide - divide function
- *
- * Description: printing welcome line, menu and
- * quitting with option 0
+ * add - asks user for 2 numbers to add
  * Return: void
  */
-
 void add(void)
 {
 	int A;
@@ -29,6 +21,10 @@ void add(void)
 	printf("Result: %d\n", result);
 }
 
+/**
+ * subtract - asks user for 2 numbers to subtract
+ * Return: void
+ */
 void subtract(void)
 {
 	int A;
@@ -44,6 +40,10 @@ void subtract(void)
 	printf("Result: %d\n", result);
 }
 
+/**
+ * multiply - asks user for 2 numbers to multiply
+ * Return: void
+ */
 void multiply(void)
 {
 	int A;
@@ -59,6 +59,10 @@ void multiply(void)
 	printf("Result: %d\n", result);
 }
 
+/**
+ * divide - asks user for 2 numbers to divide
+ * Return: void
+ */
 void divide(void)
 {
 	int A;
@@ -82,6 +86,11 @@ void divide(void)
 	}
 }
 
+/**
+ * main - main function that calls helper functions
+ *
+ * Return: void
+ */
 int main(void)
 {
 	int n = -1;
