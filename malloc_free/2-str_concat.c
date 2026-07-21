@@ -18,13 +18,16 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1;
 	unsigned int l2;
 
+	if (s1 == 0)
+		s1 = NULL;
+
+	if (s2 == 0)
+		s2 = NULL;
+
 	for (l1 = 0; s1[l1] != '\0'; l1++)
-	{
-	}
 
 	for (l2 = 0; s2[l2] != '\0'; l2++)
-	{
-	}
+
 
 	size = malloc(sizeof(char) * (l1 + l2 + 1));
 
