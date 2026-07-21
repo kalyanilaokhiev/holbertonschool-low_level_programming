@@ -18,11 +18,11 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1;
 	unsigned int l2;
 
-	if (s1 == 0)
-		s1 = NULL;
+	if (s1 == NULL)
+		s1 = "";
 
-	if (s2 == 0)
-		s2 = NULL;
+	if (s2 == NULL)
+		s2 = "";
 
 	for (l1 = 0; s1[l1] != '\0'; l1++)
 
