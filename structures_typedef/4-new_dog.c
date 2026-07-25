@@ -33,7 +33,7 @@ int string_len(char *str)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ptr;
+	dog_t *d;
 	int name_len, owner_len, i;
 
 	if (name == NULL || owner == NULL)
@@ -45,32 +45,32 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (owner[owner_len] != '\0')
 		owner_len++;
 
-	ptr = malloc(sizeof(dog_t));
-	if (ptr == NULL)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
 
-	ptr->name = malloc(sizeof(char) * (name_len + 1));
-	if (ptr->name == NULL)
+	d->name = malloc(sizeof(char) * (name_len + 1));
+	if (d->name == NULL)
 	{
-		free(ptr);
+		free(d);
 		return (NULL);
 	}
 
 	for (i = 0; i <= name_len; i++)
-		ptr->name[i] = name[i];
+		pt->name[i] = name[i];
 
-	ptr->owner = malloc(sizeof(char) * (owner_len + 1));
-	if (ptr->owner == NULL)
+	d->owner = malloc(sizeof(char) * (owner_len + 1));
+	if (d->owner == NULL)
 	{
-		free(ptr->name);
-		free(ptr);
+		free(d->name);
+		free(d);
 		return (NULL);
 	}
 
 	for (i = 0; i <= owner_len; i++)
-		ptr->owner[i] = owner[i];
+		d->owner[i] = owner[i];
 
-	ptr->age = age;
+	d->age = age;
 
-	return (ptr);
+	return (d);
 }
