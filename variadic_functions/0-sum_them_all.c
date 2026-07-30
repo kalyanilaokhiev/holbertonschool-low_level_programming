@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * sum_them_all - summing all ints
+ *
+ * @n: amount of numbers to add
+ *
+ * Return: sum
+ */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
@@ -16,9 +24,11 @@ int sum_them_all(const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		int x = va_arg(args, int);
+
 		sum += x;
+
 	}
 	va_end(args);
-	
+
 	return (sum);
 }
