@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * main - prints name of program
+ * main - prints all strings of program
  *
  * @argc: number of strings in array
  * @argv: array of strings in argc
  *
- * Return: name
+ * Return: all strings
  */
 
 int main(int argc, char *argv[])
