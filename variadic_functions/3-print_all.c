@@ -82,7 +82,7 @@ void print_all(const char * const format, ...)
 		while (pointers[j].letter)
 		{
 			/* goes through format string and matches pointer array letters */
-			while (format[i] == pointers[j].letter)
+			if (format[i] == pointers[j].letter)
 			{
 				/* originally print "" */
 				printf("%s", comma);
