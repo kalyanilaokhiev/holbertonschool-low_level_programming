@@ -17,12 +17,6 @@ void _puts(char *str)
 		_putchar(str[i]);
 		i++;
 	}
-
 	/* when reach end, print new line */
-	while (str[i] == '\0')
-	{
-		_putchar('\n');
-	}
 	_putchar('\n');
-
 }
