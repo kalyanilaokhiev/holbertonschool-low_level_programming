@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * _puts_recursion - prints out string using recursion
+ * @s: pointer to the string
+ */
+
 void _puts_recursion(char *s)
 {
 	if (*s == '\0')
