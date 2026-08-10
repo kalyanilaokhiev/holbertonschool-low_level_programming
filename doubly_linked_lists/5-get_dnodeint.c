@@ -1,0 +1,32 @@
+#include "lists.h"
+#include <string.h>
+#include <stdlib.h>
+
+/**
+ * get_dnodeint_at_index - find int at index given
+ * @head: pointer to first node
+ * @index: target index
+ *
+ */
+
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+	unsigned int i;
+	i = 0;
+
+	if (head == NULL)
+		return(NULL);
+
+
+	if (head != NULL)
+	{
+		/* find the i that matches the index */
+		while (i != index)
+		{
+			i++;
+			head = head->next; /* if not correct i, move head to next */
+		}
+		return (head);
+	}
+	return (NULL);
+}
