@@ -7,18 +7,20 @@
  * @head: pointer to first node
  * @index: target index
  *
+ * Return: head or NULL if out of bounds
  */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
+
 	i = 0;
 
 	if (head == NULL)
-		return(NULL);
+		return (NULL);
 
 
-	if (head != NULL)
+	if (head != NULL && i < index)
 	{
 		/* find the i that matches the index */
 		while (i != index)
