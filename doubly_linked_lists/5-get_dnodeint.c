@@ -22,12 +22,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	if (head != NULL && i < index)
 	{
-		/* find the i that matches the index */
-		while (i != index)
-		{
-			i++;
-			head = head->next; /* if not correct i, move head to next */
-		}
+		i++;
+		head = head->next; /* if not correct i, move head to next */
+	
 		return (head);
 	}
 	return (NULL);
