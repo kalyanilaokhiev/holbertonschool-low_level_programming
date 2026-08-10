@@ -4,8 +4,9 @@
 
 /**
  * free_dlistint - free list
- * @h: pointer to struct
+ * @head: pointer to struct
  */
+
 void free_dlistint(dlistint_t *head)
 {
 	/* create temporary node pointer */
