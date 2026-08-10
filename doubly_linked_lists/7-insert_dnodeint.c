@@ -15,12 +15,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node;
 	dlistint_t *current_node;
-
 	unsigned int i;
 
 	i = 0;
-
-	/* malloc size of dlistint_t */
 	new_node = malloc(sizeof(dlistint_t));
 
 	/* if idx at start at list, call func */
@@ -32,7 +29,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	current_node = *h;
 
-	/* stop before where new node goes */
+	/* stop before new node insert */
 	while (current_node != NULL && i < idx - 1)
 	{
 		i++;
@@ -55,5 +52,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/* update current to point forward to new_node */
 	current_node->next = new_node;
 
-	return (*h);
+	return (new_node);
 }
