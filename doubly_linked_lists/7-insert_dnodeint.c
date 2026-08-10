@@ -39,6 +39,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		current_node = current_node->next;
 	}
 
+	if (current_node == NULL)
+		return (NULL); /* out of range */
+
 	/* if node end of list, add node there */
 	if (current_node->next == NULL)
 		return (add_dnodeint_end(h, n));
