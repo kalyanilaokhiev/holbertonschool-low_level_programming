@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prime_num = using recursion to check if number is divisible by i
+ * prime_num - using recursion to check if number is divisible by i
  * @n: input number
  * @i: what input is being divided by
  *
@@ -13,13 +13,13 @@ int prime_num(int n, int i)
 	/* checked up to sqrt n with no divisors aka prime */
 	if (i * i > n)
 		return (1);
-	
+print_repeat(va_list args)
 	/* found num that divides n evernly aka not prime */
 	if (n % i == 0)
 		return (0);
 
 	/* recursion to test next i divisor */
-	return(prime_num(n, i + 1));
+	return (prime_num(n, i + 1));
 }
 
 /**
@@ -35,5 +35,5 @@ int is_prime_number(int n)
 		return (0);
 
 	/* begin looking at divisors from first prime num aka 2 */
-	return(prime_num(n, 2));
+	return (prime_num(n, 2));
 }
