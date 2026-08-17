@@ -13,7 +13,7 @@ int prime_num(int n, int i)
 	/* checked up to sqrt n with no divisors aka prime */
 	if (i * i > n)
 		return (1);
-print_repeat(va_list args)
+
 	/* found num that divides n evernly aka not prime */
 	if (n % i == 0)
 		return (0);
