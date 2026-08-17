@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * sqrt - using recurion find natural square root of number
+ * sqrt_find - using recurion find natural square root of number
  * @n: target number
  * @i: current index
  *
@@ -9,7 +9,7 @@
  */
 
 int sqrt_find(int n, int i)
-{	
+{
 	/* natural square root found */
 	if (i * i == n)
 		return (i);
@@ -26,7 +26,7 @@ int sqrt_find(int n, int i)
  * _sqrt_recursion - returns natural square root of number
  * @n: target number
  *
- * Return: resulting square root, or -1 
+ * Return: resulting square root, or -1
  */
 int _sqrt_recursion(int n)
 {
