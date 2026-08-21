@@ -24,8 +24,8 @@ void dup_data(int file_from, int file_to, char *argv[])
 		{
 			close(file_from);
 			close(file_to);
-			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
-			exit(100);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
 		}
 	}
 
