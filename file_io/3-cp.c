@@ -5,6 +5,11 @@
 #include "main.h"
 
 /**
+ * main - rogram that copies the content of a file to another file
+ * @argc: number of input arguments
+ * @argv: values in each input
+ *
+ * Return: various error messages or text in output
  */
 
 int main(int argc, char *argv[])
@@ -19,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY); /* open first file */
-	
+
 	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
