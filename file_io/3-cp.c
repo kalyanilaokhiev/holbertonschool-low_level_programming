@@ -5,7 +5,41 @@
 #include "main.h"
 
 /**
- * main - rogram that copies the content of a file to another file
+ * dup_data - helper function used to copy the data into file_to
+ * @file_from: original file
+ * @file_to: file ext is copied into
+ * @argv: values in each input
+ */
+
+void dup_data(int file_from, int file_to, char *argv[])
+{
+	char buffer[1024];
+	ssize_t bytes_read, writing;
+
+	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
+	{
+		writing = write(file_to, buffer, bytes_read);
+
+		if (writing == -1 || writing != bytes_read)
+		{
+			close(file_from);
+			close(file_to);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
+			exit(100);
+		}
+	}
+
+	if (bytes_read == -1)
+	{
+		close(file_from);
+		close(file_to);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+}
+
+/**
+ * main - program that copies the content of a file to another file
  * @argc: number of input arguments
  * @argv: values in each input
  *
@@ -15,8 +49,6 @@
 int main(int argc, char *argv[])
 {
 	int file_from, file_to;
-	ssize_t bytes_read, writing;
-	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -37,24 +69,4 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
-	{
-		writing = write(file_to, buffer, bytes_read);
-
-		if (writing == -1 || writing != bytes_read)
-		{
-			close(file_from);
-			close(file_to);
-			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
-			exit(100);
-		}
-	}
-	if (bytes_read == -1)
-	{
-		close(file_from);
-		close(file_to);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	return (0);
 }
