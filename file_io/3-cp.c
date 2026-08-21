@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 	int file_from, file_to;
 
 	if (argc != 3)
-	{
+	{f
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
@@ -69,4 +69,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+
+	close_file(file_from);
+	close_file(file_to);
+
+	return (0);
 }
