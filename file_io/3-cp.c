@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	dup_data(file_from, file_to, argv);
+
 	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
