@@ -21,6 +21,24 @@ void dup_data(int file_from, int file_to, char *argv[])
 	{
 		/* write exactly number of bytes read */
 		writing = write(file_to, buffer, bytes_read);
+
+		/* verify write completed without errors */
+		if (writing == -1 || writing != bytes_read)
+		{
+			close(file_from);
+			close(file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+
+	/* check if read closed due to fail */
+	if (bytes_read == -1)
+	{
+		close(file_from);
+		close(file_to);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 }
 
@@ -36,7 +54,6 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 
-	/* num of arg not correct */
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
